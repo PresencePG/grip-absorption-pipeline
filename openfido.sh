@@ -24,7 +24,7 @@ mkdir -p $path_to_tmp_dir
 echo "Copying input files to working directory"
 cp -r $OPENFIDO_INPUT/* .
 
-input_glm=`ls -1 *.glm`
+input_glm=`ls -1 $OPENFIDO_INPUT/*.glm | sed 's#.*/##'`
 echo "Input GLM: $input_glm"
 
 echo "Running GridLabD"
